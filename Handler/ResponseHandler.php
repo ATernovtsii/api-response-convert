@@ -51,7 +51,8 @@ class ResponseHandler
             $responseData['errorData'] = $convertedData->errorData;
         }
         if ($convertedData->message) {
-            $responseData['message'] = $this->translator->trans($convertedData->message, $convertedData->messageParams);
+            $responseData['message'] = $this->translator?->trans($convertedData->message, $convertedData->messageParams)
+                ?? $convertedData->message;
         }
 
         if ($convertedData->mainLevelData) {
