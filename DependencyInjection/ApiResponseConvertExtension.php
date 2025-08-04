@@ -2,10 +2,10 @@
 
 namespace tandrewcl\ApiResponseConvertBundle\DependencyInjection;
 
-use Symfony\Component\{
-    DependencyInjection\ContainerBuilder, DependencyInjection\Loader\YamlFileLoader, Config\FileLocator,
-    HttpKernel\DependencyInjection\Extension
-};
+use Symfony\Component\Config\FileLocator;
+use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Symfony\Component\DependencyInjection\Extension\Extension;
+use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 use tandrewcl\ApiResponseConvertBundle\Converter\ResponseConverterInterface;
 
 class ApiResponseConvertExtension extends Extension
